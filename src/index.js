@@ -7,7 +7,7 @@ export default function (babel) {
         if (!path.node.id) return;
         var name = path.node.id.name;
 
-        if (name === "_classCallCheck" || name === "_possibleConstructorReturn")
+        if (name === "_classCallCheck")
           path.remove();
         else if (name === "_inherits")
           path.node.body = t.blockStatement([
@@ -103,9 +103,11 @@ export default function (babel) {
       
       CallExpression(path) {
         var name = path.node.callee.name;
-        if (name === "_possibleConstructorReturn")
-          path.replaceWith(t.Identifier("this"));
+        // if (name === "_possibleConstructorReturn")
+        //   path.replaceWith(t.Identifier("this"));
       }
     }
   };
 }
+
+
