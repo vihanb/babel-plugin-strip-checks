@@ -1,0 +1,25 @@
+{
+  "name": "babel-plugin-strip-checks",
+  "version": "1.0.0",
+  "description": "Removes unnecessary class checks, greatly increasing code speed",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel -d ./lib ./src",
+    "prepublish": "babel -d ./lib ./src --minified"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vihanb/babel-plugin-strip-checks.git"
+  },
+  "author": "Vihan B <vihan@vihan.org> (vihan.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vihanb/babel-plugin-strip-checks/issues"
+  },
+  "homepage": "https://github.com/vihanb/babel-plugin-strip-checks#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  }
+}
