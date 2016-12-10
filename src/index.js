@@ -101,15 +101,11 @@ export default function (babel) {
         }
       },
       
-      ReturnStatement(path) {
-        if (t.isCallExpression(path.node.argument)) {
-          var name = path.node.argument.callee.name;
-          if (name === "_possibleConstructorReturn")
-            path.node.argument = t.Identifier("this");
-        }
+      CallExpression(path) {
+        var name = path.node.callee.name;
+        if (name === "_possibleConstructorReturn")
+          path.replaceWith(t.Identifier("this"));
       }
     }
   };
 }
-
-
