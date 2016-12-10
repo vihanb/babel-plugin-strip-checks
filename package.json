@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-strip-checks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Removes unnecessary class checks, greatly increasing code speed",
   "main": "lib/index.js",
   "scripts": {

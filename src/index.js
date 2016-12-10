@@ -4,6 +4,7 @@ export default function (babel) {
   return {
     visitor: {
       FunctionDeclaration(path) {
+        if (!path.node.id) return;
         var name = path.node.id.name;
 
         if (name === "_classCallCheck" || name === "_possibleConstructorReturn")
